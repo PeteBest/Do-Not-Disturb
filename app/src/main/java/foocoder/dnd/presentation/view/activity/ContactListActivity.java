@@ -76,6 +76,7 @@ public final class ContactListActivity extends BaseActivity<ContactComponent> im
                 .skip(1)
                 .debounce(100, MILLISECONDS)
                 .map(CharSequence::toString)
+                .observeOn(AndroidSchedulers.mainThread())
                 .<String>switchMap(s -> Observable.create(subscriber -> {
                     try {
                         presenter.onTextChanged(s.toLowerCase());
