@@ -30,6 +30,7 @@ import foocoder.dnd.presentation.view.adapter.ContactAdapter;
 import rx.Observable;
 import rx.Subscription;
 import timber.log.Timber;
+import rx.android.schedulers.AndroidSchedulers;
 
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
